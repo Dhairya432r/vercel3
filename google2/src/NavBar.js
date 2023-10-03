@@ -8,7 +8,7 @@ import('preline')
 function NavBar() {
     const [user, setUser] = useState(null);
     const [profile, setProfile] = useState(null);
-   
+   axios.defaults.withCredentials= true;
 
 
     const login = useGoogleLogin({
