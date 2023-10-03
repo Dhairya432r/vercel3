@@ -8,7 +8,7 @@ import('preline')
 function NavBar() {
     const [user, setUser] = useState(null);
     const [profile, setProfile] = useState(null);
-    axios.defaults.withCredentials = true;
+   
 
 
     const login = useGoogleLogin({
@@ -23,7 +23,7 @@ function NavBar() {
 
     const sendUserDataToAPI = (userData) => {
         // Send user data to the backend API using Axios POST request
-        axios.post('https://google-backend-dhairyas-projects.vercel.app/api/user', userData)
+        axios.post('https://google-backend.vercel.app/api', userData)
             .then(response => {
                 console.log('User data sent successfully:', response.data);
             })
