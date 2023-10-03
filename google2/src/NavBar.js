@@ -22,7 +22,7 @@ function NavBar() {
 
     const sendUserDataToAPI = (userData) => {
         // Send user data to the backend API using Axios POST request
-        axios.post('https://google-d-hhli.vercel.app/api/user', userData)
+        axios.post('https://google-backend.vercel.app/api/user', userData)
             .then(response => {
                 console.log('User data sent successfully:', response.data);
             })
