@@ -62,14 +62,20 @@ mongoose.connect('mongodb+srv://Dhairya:Dhairya432r@cluster0.kad7z2w.mongodb.net
 
 
 
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 app.use("/",(req,res) => {
-    res.send("Hello");
+    res.send("Helloo");
 })
 app.use("/api/user",(req,res) => {
     res.send("Hellobhai");
 })
+app.use(cors({
+    origin: ["https://google-frontend.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+}
+));
 
 app.post('/api/user', async (req, res) => {
     const { name, email, picture } = req.body;
