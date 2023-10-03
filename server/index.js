@@ -67,6 +67,9 @@ app.use(express.json());
 app.use("/",(req,res) => {
     res.send("Hello");
 })
+app.use("/api/user",(req,res) => {
+    res.send("Hellobhai");
+})
 
 app.post('/api/user', async (req, res) => {
     const { name, email, picture } = req.body;
