@@ -67,7 +67,7 @@ app.use(express.json());
 app.use("/",(req,res) => {
     res.send("Helloo");
 })
-app.use("/api",(req,res) => {
+app.use("/api",(req,res) => {   //api/user
     res.send("Hellobhai");
 })
 app.use(cors({
@@ -77,7 +77,7 @@ app.use(cors({
 }
 ));
 
-app.post('/api', async (req, res) => {
+app.post('/', async (req, res) => {  //api/user
     const { name, email, picture } = req.body;
 
     try {
